@@ -19,7 +19,7 @@ function Contact() {
     }
 
     function handleSendBtnClick(){
-        //our logic to send message
+        //our logic to send message 
     }
 
     return (

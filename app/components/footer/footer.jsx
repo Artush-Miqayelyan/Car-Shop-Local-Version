@@ -1,45 +1,44 @@
-'use client'
+"use client"
 
-import styles from "./footer.module.css"
-import React , {Fragment} from "react"
+import styles from './footer.module.css'
+
+import Logo from "@/public/logo.png"
+
+import Link from 'next/link'
 import Image from "next/image"
-import FooterLogo from "../../../public/footerLogo.png"
-import Link from "next/link"
+import { usePathname } from 'next/navigation'
 
 import { isDefinedPathForfooter } from "@/app/helpers/helperFunctions"
-import { usePathname } from "next/navigation"
-
 
 function Footer() {
+    const currentPath = usePathname()
 
-  const pathname = usePathname()
-
-  return <>
-    {isDefinedPathForfooter(pathname) || pathname.includes('/cars/') || pathname.includes("/dealers/")?
-      <div className={styles.footerContainer} >
-        <div className={styles.footerTop}>
-          <div className={styles.logo}>
-            <Link href='/'><Image
-              priority
-              style={{objectFit: "cover"}}
-              fill
-              src={FooterLogo}
-              color="black"
-              alt="Logo"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            /></Link>
-          </div>
-        </div>
-        <div className={styles.footerBottom}>
-          <Link href="/about" > About project </Link>
-          <Link href="/rules" > Rules of use </Link>
-          <Link href="/advertisement" > Advertisement </Link>
-          <Link href="/contact" > Contact </Link>
-          <Link href="/help" > Help </Link>
-        </div>
-      </div > : null
-    }
-  </>
+    return <>
+        {
+            isDefinedPathForfooter(currentPath) || currentPath.includes('/cars/') || currentPath.includes("/dealers/")
+                ? <div className={styles.footer}>
+                    <Link href='/' className={styles.logo}>
+                        <Image
+                            priority
+                            style={{ objectFit: "cover" }}
+                            fill
+                            src={Logo}
+                            color="black"
+                            alt="Logo"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </Link>
+                    <div className={styles.footerContent}>
+                        <Link href="/about" > About project </Link>
+                        <Link href="/rules" > Rules of use </Link>
+                        <Link href="/advertisement" > Advertisement </Link>
+                        <Link href="/contact" > Contact </Link>
+                        <Link href="/help" > Help </Link>
+                    </div>
+                </div>
+                : null
+        }
+    </>
 }
 
-export default Footer;
+export default Footer

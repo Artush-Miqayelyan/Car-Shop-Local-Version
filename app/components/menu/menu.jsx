@@ -1,9 +1,9 @@
 import styles from "./menu.module.css"
-import Audi from "../../../public/carsLogo/Audi.jpg"
+import Audi from "../../../public/carsLogo/Audi.png"
 import BMW from "../../../public/carsLogo/BMW.png"
-import Chevrolet from "../../../public/carsLogo/Chevrolet.jpg"
-import Ford from "../../../public/carsLogo/Ford.jpg"
-import Tesla from "../../../public/carsLogo/Tesla.jpg"
+import Chevrolet from "../../../public/carsLogo/Chevrolet.png"
+import Ford from "../../../public/carsLogo/Ford.png"
+import Tesla from "../../../public/carsLogo/Tesla.png"
 import Hyundai from "../../../public/carsLogo/Hyundai.png"
 import MercedesBenz from "../../../public/carsLogo/MercedesBenz.png"
 import Nissan from "../../../public/carsLogo/Nissan.png"
@@ -37,13 +37,13 @@ function Menu() {
             {
                 carsLogo.map((logo, index) => {
                     return <div key={index} className={styles.carLogo}>
-                                                    <Link href="/cars/all">
+                        <Link href="/cars/all">
 
-                        <Tooltip
-                            title={logo.name}
-                            arrow
-                            TransitionProps={{ timeout: 700 }}
-                        >
+                            <Tooltip
+                                title={logo.name}
+                                arrow
+                                TransitionProps={{ timeout: 700 }}
+                            >
                                 <Image
                                     onClick={() => {
                                         dispatch(dispatchMarksInputValue(logo.name))
@@ -55,7 +55,7 @@ function Menu() {
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 // layout="responsive"
                                 />
-                        </Tooltip>
+                            </Tooltip>
                         </Link>
 
                     </div>

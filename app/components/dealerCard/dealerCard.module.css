@@ -1,0 +1,30 @@
+.dealerCard {
+    margin: 5px;
+    width: 210px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgb(78, 75, 75);
+    background-color: rgba(67, 142, 172, 0.219);
+    border-radius: 7%;
+}
+
+.dealerAvatar {
+    width: 95%;
+    height: 65%;
+    position: relative;
+    margin: 5px;
+}
+
+.img {
+    border-radius: 7%;
+}
+
+.dealerName {
+    width: auto;
+    font-size: 120%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect } from "react"
+import "./global.css"
 
 import { useSelector, useDispatch } from 'react-redux'
 import {
@@ -11,13 +12,10 @@ import {
 } from './redux/features/IsLoggedIn/IsLoggedInSlice'
 
 import { getCars } from "./redux/API/autoshopAPI"
-import { getUsers } from "@/app/redux/API/usersAPI";
 
 import Menu from "./components/menu/menu"
-import Main from "./components/main/main"
 import FilterBar from './components/FilterBar/filterBar'
-
-import "./global.css"
+import HomePageCarsOffers from "./components/homePageCarsOffers/homePageCarsOffers"
 
 export default function Home() {
 
@@ -30,18 +28,13 @@ export default function Home() {
     }
   }, [currentUser])
 
-  // useEffect(() => {
-  //   dispatch(getUsers())
-  // }, [])
-
   useEffect(() => {
-    console.log("Getting Cars")
     dispatch(getCars())
   }, [])
 
-  return <div className="main" >
+  return <div className="HomePageContent" >
     <Menu />
     <FilterBar />
-    <Main />
+    <HomePageCarsOffers />
   </div>
 }

@@ -8,8 +8,10 @@
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07) ;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 1000;
+    background: linear-gradient(to right , #42617979, #CFD8DC);
 }
-.onlyIconHeader{
+
+.headerWithOnlyIconVariant{
     width: 80%;
     height: 70px;
     position: fixed;
@@ -20,26 +22,26 @@
     justify-content: center;
     align-items: center;
 }
-.menuSec {
+
+.MenuButton {
     width: 7%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
-.menuSec:hover{
-    background-color: #E8EBF0;
+
+.MenuButton:hover{
+    background-color: #47636e33;
     transition: all 800ms ease;
 }
-.logoSec {
+
+.Logo {
     width: 13%;
     height: 90%;
     cursor: pointer;
     position: relative;
 }
 
-.inputSec {
+.serachInput {
     width: 30%;
     height: 100%;
     display: flex;
@@ -47,15 +49,14 @@
     align-items: center;
 }
 
-.login_help_diller_Sec {
+.delaers_messages_login_sell {
     width: 40%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
 }
 
-.dillerSec {
+.dealers {
     width: 20%;
     height: 100%;
     display: flex;
@@ -66,11 +67,13 @@
     text-decoration: none;
     color: black;
 }
-.dillerSec:hover{
-    background-color: #E8EBF0;
+
+.dealers:hover{
+    background-color: #71727571;
     transition: all 800ms ease;
 }
-.helpSec {
+
+.messages {
     width: 20%;
     height: 100%;
     display: flex;
@@ -81,12 +84,13 @@
     text-decoration: none;
     color: black;
 }
-.helpSec:hover{
-    background-color: #E8EBF0;
+
+.messages:hover{
+    background-color: #71727571;
     transition: all 800ms ease;
 }
 
-.NotLoggedInAccountSec{
+.NotLoggedInAInterface{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -97,34 +101,31 @@
     align-items: center;
 }
 
-.LoggedInAccountSec{
+.LoggedInInterface{
+    width: 20%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 20%;
-    height: 100%;
     position: relative;
     justify-content: center;
+    cursor: pointer;
 }
 
-.LoggedInAccountSec:hover{
-    background-color: #E8EBF0;
+.LoggedInInterface:hover{
+    background-color: #71727571;
     transition: all 800ms ease;
 }
 
-.SignInBtn{
+.signInBtn{
     width: 70%;
 }
 
-.SignInBtn{
+.signInBtn{
     width: auto;
 }
 
-.accountSec:hover{
-    background-color: #E8EBF0;
-    transition: all 800ms ease;
-}
-.soldSec {
+.sell {
     width: 20%;
     height: 100%;
     display: flex;

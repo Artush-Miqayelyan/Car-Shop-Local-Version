@@ -1,0 +1,31 @@
+.homePageCarsOffers {
+    width: 80%;
+    height: 100%;
+}
+
+.currentPriorityContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 200px;
+    width: 100%;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.currentContainerContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.showMoreButton{
+    margin-left: 450px;
+}
